@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="Écoutez Radio Lokal FM 974 en direct.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<title>Radio Lokal FM 974</title>
+<style>
+:root{color-scheme:dark;--green:#31e85d;--yellow:#ffe529;--orange:#ff8b18;--red:#ff2828}
+*{box-sizing:border-box}
+body{margin:0;background:#050505;color:#f5f5f5;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+main{max-width:520px;margin:auto;padding:24px 18px 40px}
+header{text-align:center}
+.logo{width:min(86vw,390px);max-height:360px;object-fit:contain}
+.tag{letter-spacing:.22em;font-size:.8rem;color:#aaa;margin-top:10px}
+h1{font-size:1.7rem;letter-spacing:.06em;margin:12px 0 4px}
+.subtitle{color:#bcbcbc;margin:0 0 22px}
+.panel{border:1px solid #242424;border-radius:22px;padding:20px;background:linear-gradient(180deg,#111,#080808);box-shadow:0 14px 40px #0008}
+.live{display:flex;align-items:center;justify-content:center;gap:9px;color:#eee;font-size:.85rem;letter-spacing:.15em;margin:0 0 14px}
+.dot{width:9px;height:9px;border-radius:50%;background:#f33;box-shadow:0 0 12px #f33}
+.equalizer{display:flex;justify-content:center;align-items:end;gap:5px;height:38px;margin:16px 0}
+.equalizer span{width:12px;border-radius:3px;background:linear-gradient(to top,var(--red),var(--orange),var(--yellow),var(--green));height:var(--h)}
+.listen{font-size:1.1rem;text-align:center;font-weight:700;margin:0 0 6px}
+.note{text-align:center;color:#999;font-size:.9rem;margin:0 0 16px}
+.player{min-height:100px;padding:10px;border-radius:14px;background:#101010;overflow:hidden}
+.cstrEmbed{width:100%;min-height:95px}
+a{color:#d5d5d5}
+.links{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.links a{padding:10px 14px;border:1px solid #333;border-radius:999px;text-decoration:none;font-size:.9rem}
+footer{text-align:center;color:#777;font-size:.8rem;margin-top:26px}
+</style>
+</head>
+<body>
+<main>
+<header>
+<img class="logo" src="logo.jpg" alt="Logo Radio Lokal FM">
+<div class="tag">LA RADIO QUI VIBRE À LA RÉUNION</div>
+<h1>RADIO LOKAL FM 974</h1>
+<p class="subtitle">Bonne écoute • En direct</p>
+</header>
+<section class="panel" aria-label="Lecteur radio">
+<div class="live"><span class="dot"></span> RADIO EN DIRECT</div>
+<div class="equalizer" aria-hidden="true">
+<span style="--h:14px"></span><span style="--h:23px"></span><span style="--h:34px"></span><span style="--h:18px"></span><span style="--h:29px"></span><span style="--h:38px"></span><span style="--h:25px"></span><span style="--h:15px"></span><span style="--h:31px"></span><span style="--h:22px"></span><span style="--h:37px"></span><span style="--h:19px"></span>
+</div>
+<p class="listen">Écouter Radio Lokal FM</p>
+<p class="note">Appuie sur le bouton de lecture du lecteur ci-dessous.</p>
+<div class="player">
+<div class="cstrEmbed" data-type="newStreamPlayer" data-publicToken="29ef571c-2a5c-4ac9-add0-188a88f1d81b" data-theme="dark" data-color="6C2BDD" data-channelId=""></div>
+</div>
+</section>
+<div class="links">
+<a href="https://radiolokalfm.ismyradio.com/" target="_blank" rel="noopener">Site officiel</a>
+<a href="https://radiolokalfm.ismyradio.com/" target="_blank" rel="noopener">Actualités & émissions</a>
+</div>
+<footer>Radio Lokal FM 974 • La Réunion</footer>
+</main>
+<script src="https://cdn.cloud.caster.fm/widgets/embed.js"></script>
+<script>
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+}
+</script>
+</body>
+</html>
